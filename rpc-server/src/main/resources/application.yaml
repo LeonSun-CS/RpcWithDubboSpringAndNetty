@@ -1,0 +1,9 @@
+rpc:
+  server:
+    zk:
+      root: /rpc
+      addr: 34.60.44.181:2181
+      timeout: 10000
+    network: # This section needs to be manually added
+      port: 28889
+      address: 192.168.1.112 # manually fill in the IP address of the current machine
