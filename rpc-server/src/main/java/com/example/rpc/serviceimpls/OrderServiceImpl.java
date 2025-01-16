@@ -1,8 +1,8 @@
 package com.example.rpc.serviceimpls;
 
-import com.example.rpc.annotations.MyRpcService;
+import com.example.rpc.server.annotations.MyRpcService;
 import com.example.rpc.config.RpcServerConfiguration;
-import com.example.rpc.services.OrderService;
+import com.example.rpc.server.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

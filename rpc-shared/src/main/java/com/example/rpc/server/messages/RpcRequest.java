@@ -1,4 +1,4 @@
-package com.example.rpc.messages;
+package com.example.rpc.server.messages;
 
 /**
  * This class represents the request message that is sent from the client to the server, aiming to help

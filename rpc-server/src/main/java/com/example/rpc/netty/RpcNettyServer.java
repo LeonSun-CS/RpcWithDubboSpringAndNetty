@@ -1,9 +1,8 @@
 package com.example.rpc.netty;
 
-import com.example.rpc.netty.codec.RpcRequestDeserializer;
-import com.example.rpc.netty.codec.RpcResponseSerializer;
+import com.example.rpc.server.netty.codec.RpcRequestDeserializer;
+import com.example.rpc.server.netty.codec.RpcResponseSerializer;
 import com.example.rpc.netty.handler.RequestHandler;
-import com.example.rpc.registry.zk.ZkRegistry;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
@@ -14,7 +13,6 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.LengthFieldPrepender;
 import io.netty.util.concurrent.DefaultThreadFactory;
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

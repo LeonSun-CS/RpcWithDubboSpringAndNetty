@@ -1,4 +1,4 @@
-package com.example.rpc.messages;
+package com.example.rpc.server.messages;
 
 /**
  * This class represents the response message of the RPC framework, aiming to help RPC client to extract the

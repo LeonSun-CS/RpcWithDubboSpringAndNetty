@@ -1,4 +1,4 @@
-package com.example.rpc.annotations;
+package com.example.rpc.server.annotations;
 
 import org.springframework.stereotype.Component;
 

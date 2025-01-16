@@ -1,4 +1,4 @@
-package com.example.rpc.netty.codec.cache;
+package com.example.rpc.server.netty.codec.cache;
 
 import io.protostuff.Schema;
 import io.protostuff.runtime.RuntimeSchema;

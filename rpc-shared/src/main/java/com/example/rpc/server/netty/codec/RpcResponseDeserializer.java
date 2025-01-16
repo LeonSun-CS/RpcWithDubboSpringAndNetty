@@ -1,11 +1,10 @@
-package com.example.rpc.netty.codec;
+package com.example.rpc.server.netty.codec;
 
-import com.example.rpc.messages.RpcResponse;
-import com.example.rpc.netty.codec.cache.SchemaCache;
+import com.example.rpc.server.messages.RpcResponse;
+import com.example.rpc.server.netty.codec.cache.SchemaCache;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToMessageDecoder;
-import io.protostuff.LinkedBuffer;
 import io.protostuff.ProtostuffIOUtil;
 
 import java.util.List;

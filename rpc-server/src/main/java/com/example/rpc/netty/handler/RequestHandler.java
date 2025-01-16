@@ -1,7 +1,7 @@
 package com.example.rpc.netty.handler;
 
-import com.example.rpc.messages.RpcRequest;
-import com.example.rpc.messages.RpcResponse;
+import com.example.rpc.server.messages.RpcRequest;
+import com.example.rpc.server.messages.RpcResponse;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
