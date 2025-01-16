@@ -1,11 +1,11 @@
 package com.example.rpc.boot;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
-@Configuration
+@Component
 public class RpcServerBootstrap {
 
     @Autowired

@@ -2,11 +2,15 @@ package com.example.rpc.annotations;
 
 import org.springframework.stereotype.Component;
 
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
 /**
  * This is a custom annotation to mark the service class, so that our spring application can scan it
  * and register it to a registry service.
  */
 @Component
+@Retention(RetentionPolicy.RUNTIME)
 public @interface MyRpcService {
 
         /**

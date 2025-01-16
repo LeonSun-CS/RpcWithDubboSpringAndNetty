@@ -3,6 +3,7 @@ package com.example.rpc.netty;
 import com.example.rpc.netty.codec.RpcRequestDeserializer;
 import com.example.rpc.netty.codec.RpcResponseSerializer;
 import com.example.rpc.netty.handler.RequestHandler;
+import com.example.rpc.registry.zk.ZkRegistry;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
@@ -14,11 +15,14 @@ import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.LengthFieldPrepender;
 import io.netty.util.concurrent.DefaultThreadFactory;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
-@Slf4j
 public class RpcNettyServer implements RpcServer {
+    private final Logger logger = LoggerFactory.getLogger(RpcNettyServer.class);
+
     /**
      * Start the server. As a netty server, it should bind to a port and listen to the incoming requests.
      * The server will be started by the RpcServerRunner class, after the service registration.
@@ -60,7 +64,7 @@ public class RpcNettyServer implements RpcServer {
                         }
                     });
         } catch (Exception e) {
-            log.error("Netty server start error, msg={}", e.getMessage());
+            logger.error("Netty server start error, msg={}", e.getMessage());
         } finally {
             boss.shutdownGracefully();
             worker.shutdownGracefully();

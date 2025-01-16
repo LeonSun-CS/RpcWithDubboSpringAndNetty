@@ -4,10 +4,10 @@ import com.example.rpc.annotations.MyRpcService;
 import com.example.rpc.config.RpcServerConfiguration;
 import com.example.rpc.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+@Service
 @MyRpcService(interfaceClass = OrderService.class)
-@Component
 public class OrderServiceImpl implements OrderService {
 
     @Autowired
@@ -18,3 +18,5 @@ public class OrderServiceImpl implements OrderService {
         return serverConfiguration.getServerPort() +"---"+serverConfiguration.getRpcPort()+ ": Congratulations, The RPC call succeeded, orderNo is " + orderId;
     }
 }
+
+

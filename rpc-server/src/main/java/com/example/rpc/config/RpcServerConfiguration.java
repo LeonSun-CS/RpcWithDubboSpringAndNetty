@@ -1,6 +1,8 @@
 package com.example.rpc.config;
 
+import org.I0Itec.zkclient.ZkClient;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -11,11 +13,11 @@ public class RpcServerConfiguration {
     private String zkAddr;
     @Value("${rpc.network.port}")
     private int rpcPort;
-    @Value("${rpc.server.network.port}")
+    @Value("${server.port}")
     private int serverPort;
     @Value("${rpc.server.zk.timeout:10000}")
     private int connectTimeout;
-    @Value("${rpc.server.network.address}")
+    @Value("${rpc.network.address}")
     private String serverAddress;
 
     public String getServerAddress() {
@@ -40,5 +42,10 @@ public class RpcServerConfiguration {
 
     public int getConnectTimeout() {
         return connectTimeout;
+    }
+
+    @Bean
+    public ZkClient zkClient() {
+        return new ZkClient(zkAddr, connectTimeout);
     }
 }
