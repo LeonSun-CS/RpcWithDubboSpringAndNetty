@@ -1,0 +1,23 @@
+logging:
+  level:
+    org:
+      springframework:
+        boot: DEBUG
+        context: DEBUG
+        beans: DEBUG
+      apache:
+        tomcat: DEBUG
+
+rpc:
+  client:
+    zk:
+      root: /rpc
+      addr: 34.121.183.167:2181
+      timeout: 10000
+    api:
+      package: com.example.rpc.xxx
+  cluster:
+    strategy: random
+
+server:
+  port: 8080
